@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Porfolio</title>
+
+        <style>
+
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: cursive;
+        }
+
+        body{
+            background-color: #010201;
+        }
+
+        .header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .list{
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            list-style: none;
+            margin: 1rem;
+
+
+        }
+        .list-item{
+
+            margin: 0px 20px;
+        }
+        .link{
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.3rem;
+            font-weight: 600;
+            padding: 5px;
+
+        }
+        .link:hover{
+
+            border-bottom: 2px solid #f0004b;
+          
+            border-radius: 2%;
+            transition: all .2s linear;
+
+        }
+        .main{
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            
+
+        }
+        .container1{
+          
+            margin: 180px;
+          
+        }
+        
+        .text{
+            color: white;
+        }
+        .container2{
+            
+            margin: 30px;
+        }
+        span{
+            color: #f0004b;
+
+        }
+        .span{
+          
+            margin-left: 160px;
+        }
+
+        .about{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 100px;
+
+        }
+        .img{
+
+            width: 30%;
+            height: 30%;
+            border-radius: 2%;
+            margin: 30px;
+
+        }
+        .aboutinfo{
+
+            width: 65%;
+            height: 30%;
+            margin: 30px;
+            color: #fff;
+
+
+        }
+        .infocontainer{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .infolist{
+            display: flex;
+            list-style: none;
+            margin: 0px;
+            padding: 10px;
+            margin-left: 0px;
+           
+
+        }
+        .infolist li{
+
+            margin: 0px 10px;
+
+        }
+        pre{
+            color: #fff;
+            margin-top: 20px;
+            margin-left: -30px;
+        }
+        .h2{
+            color: #fff;
+            margin: 100px;
+            font-size: 2rem;
+        }
+        .service{
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+           
+
+        }
+
+        .service-container{
+
+            height: 650px;
+            width: 30%;
+            border-radius: 5%;
+          background-color: rgb(50, 45, 45);
+            margin: 0px 30px;
+            color: #fff;
+
+        }
+        .servicepre{
+            margin: 20px;
+            line-height: 1.7;
+        }
+        .service-container:hover{
+
+            background-color: #f0004b;
+            transform: translatey(-20px);
+            transition: 0.8s ;
+
+
+        }
+        .service-container:hover .servicespan{
+            color: white;
+        }
+
+        .work{
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            transition: .8s ease;
+
+        }
+
+        .workcontainer{
+
+            height: 550px;
+            width: 30%;
+            border-radius: 5%;
+            border: 2px solid grey;
+            margin: 0px 30px;
+            color: #fff;
+            transition: .8s ease;
+
+        }
+       
+        .transform{
+            display: none;
+            color: white;  
+            opacity: 0.8;
+            transform: translatey(-500px);
+           width: 100%;
+            color: white;
+            height: 470px;
+            border-radius: 5%;
+            background: linear-gradient(#dc376b,#f0004b) ;
+            transition: .8s ease;
+        }
+        
+        .workcontainer:hover  .transform{
+           
+            display: block;
+            transition: .8s ease;
+           
+        }
+        
+        .img{
+           
+            width: 325px;
+            height: 510px;
+
+        }
+
+        .footer{
+
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            color: #fff;
+            padding: 20px;
+            font-size: 20px;
+            margin-top: 20px;
+
+
+        }
+        .footercontainer{
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 47%;
+            height: 400px;
+            color: #fff;
+            border-radius: 5%;
+            margin: 0px 10px;
+
+        }
+        .footercontainer ul{
+            list-style: none;
+            display: flex;
+
+        }
+        .footercontainer li{
+            margin: 0px 10px;
+            color: #fff;
+          
+        }
+
+        button{
+            background-color: #f0004b;
+            width: 180px;
+            height: 40px;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            margin-left: 10px;
+        }
+
+        .input{
+
+            background-color: rgb(50, 45, 45) ;
+            border: none;
+            border-radius: 4px;
+            height: 40px;
+
+        }
+        textarea{
+
+            background-color: rgb(50, 45, 45) ;
+            border: none;
+            border-radius: 4px;
+        }
+        #hide1{
+            display: none;
+        }
+
+        #hide2{
+            display: none;
+        }
+     
+        
+
+        /* media query start */
+
+
+        @media screen and (max-width: 600px) and (min-width: 350px){
+
+           
+            .list{
+    
+                flex-direction: column;
+                margin-top: 40px;
+                position: absolute;
+                margin-left: -570px;
+                width: 100%;
+                height: auto;
+                display: none;
+              /*  background-color: #f0004b;*/
+    
+    
+            }
+            .list-item{
+    
+                margin: 10px 0px;
+            }
+           
+            .main{
+
+               width: 100%;
+                flex-direction: column;
+                
+    
+            }
+            .container1{
+              
+                margin: 100px;
+              
+            }
+            
+           
+            .container2{
+                
+                margin-left: 150px;
+            }
+           
+            .about{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 100px;
+                flex-direction: column;
+                margin-left: 40px;
+    
+            }
+            .img{
+    
+                width: 30%;
+                height: 30%;
+                border-radius: 2%;
+                margin-left: -200px;
+    
+            }
+
+            .aboutinfo{
+
+                width: 65%;
+                height: 30%;
+                margin: 30px;
+                color: #fff;
+    
+    
+            }
+            .infocontainer{
+                display: flex;
+                flex-direction: column;
+            }
+    
+            .infolist{
+                display: flex;
+                list-style: none;
+                margin: 0px;
+                padding: 0px;
+                margin-left: 0px;
+                flex-direction: row;
+               
+    
+            }
+            .infolist li{
+    
+                margin: 0px 0px;
+                width: 150px;
+    
+            }
+            pre{
+                color: #fff;
+                margin-top: 20px;
+                margin-left: -30px;
+            }
+            .h2{
+                color: #fff;
+                margin: 50px;
+                font-size: 2rem;
+                text-align: center;
+            }
+
+            .service{
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                flex-wrap: wrap;
+               
+    
+            }
+    
+            .service-container{
+    
+                height: 650px;
+                width: 65%;
+                border-radius: 5%;
+              background-color: rgb(50, 45, 45);
+                margin: 20px 30px;
+                color: #fff;
+    
+            }
+
+
+            .work{
+
+               
+                flex-wrap: wrap;
+    
+            }
+    
+            .workcontainer{
+    
+                height: 550px;
+                width: 60%;
+               
+    
+            }
+           
+            .transform{
+                display: none;
+                color: white;  
+                opacity: 0.8;
+                transform: translatey(-500px);
+               width: 100%;
+                color: white;
+                height: 470px;
+                border-radius: 5%;
+                background: linear-gradient(#dc376b,#f0004b) ;
+                transition: .8s ease;
+            }
+            
+            .workcontainer:hover  .transform{
+               
+                display: block;
+                transition: .8s ease;
+               
+            }
+            
+            .img{
+               
+                width: 325px;
+                height: 510px;
+                margin-left: 00px;
+    
+            }
+    
+            .footer{
+    
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #fff;
+                padding: 20px;
+                font-size: 20px;
+                margin-top: 20px;
+                flex-direction: column;
+    
+    
+            }
+            .footercontainer{
+    
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 47%;
+                height: 400px;
+                color: #fff;
+                border-radius: 5%;
+                margin: 0px 10px;
+    
+            }
+            .footercontainer ul{
+                list-style: none;
+                display: flex;
+    
+            }
+            .footercontainer li{
+                margin: 0px 10px;
+                color: #fff;
+              
+            }
+    
+            button{
+                background-color: #f0004b;
+                width: 180px;
+                height: 40px;
+                color: #fff;
+                border: none;
+                border-radius: 4px;
+                margin-left: 80px;
+
+            }
+    
+            .input{
+    
+                background-color: rgb(50, 45, 45) ;
+                border: none;
+                border-radius: 4px;
+                height: 40px;
+                width: 430px;
+                margin-left: -50px;
+    
+            }
+            textarea{
+    
+                background-color: rgb(50, 45, 45) ;
+                border: none;
+                border-radius: 4px;
+                width: 430px;
+                margin-left: -50px;
+            }
+            #hide1{
+                display: none;
+            }
+    
+            #hide2{
+                display: none;
+            }
+         
+           
+
+
+
+        }
+
+    </style>
+    </head>
+    <body>
+
+
+        <header class="header">
+
+            <div class="logo">
+
+                <img src="logo.png" height="100px" alt="">
+
+            </div>
+
+            <nav class="navbar">
+
+                <ul class="list">
+
+                    <li class="list-item"><a class="link" href="#home">Home</a></li>
+                    <li class="list-item"><a class="link" href="#about">About</a></li>
+                    <li class="list-item"><a class="link" href="#service">Services</a></li>
+                    <li class="list-item"><a class="link" href="#work">Portfolio</a></li>
+                    <li class="list-item"><a class="link" href="#contact">Contact</a></li>
+                </ul>
+
+            </nav>
+
+        </header>
+
+        <section class="main" id="home">
+
+            <div class="container1">
+
+                <h5 class="text">Hey</h5>
+                <h2 class="text">i'm <span>Kishan</span></h2>
+                <h1 class="text">Web Developer</h1>
+
+            </div>
+
+            <div class="container2">
+
+                <img src="new.jpeg" style="border-radius: 50%; width:300px;" height="300px" alt="">
+                <p><span class="span">💻 Now Ready to Design your web </span></p>
+            </div>
+
+        </section>
+
+
+        <section class="about" id="about">
+
+            <div class="img">
+
+
+                <img src="new.jpeg" style="border-radius: 40px; margin-top:60px;" height="450px" alt="">
+
+            </div>
+
+            <div class="infocontainer">
+
+                <div class="aboutinfo">
+
+                    <h2> About Me</h2>
+                    With a diploma in computer engineering and a passion for
+                    software development, I'm excited to kick-start my career in
+                    this dynamic field. Proficient in programming languages such
+                    as C++ and Java, I'm eager to take on new challenges and
+                    continue honing my skills as I progress in my profession. I
+                    am highly motivated, a quick learner, and always looking for
+                    new opportunities to innovate and make a positive impact in
+                    the world of software development.
+
+                </div>
+
+                <div>
+
+                    <ul class="infolist">
+                        <li><a class="link" href="#hide.html"><button onclick="myfunction()"> Skill</button></a> </li>
+                        <li><a class="link" href="#hide1.html"><button onclick="myfunction1()"> Experience</button></a></li>
+                        <li><a class="link" href="#hide2.html"><button onclick="myfunction2()"> Education</button></a></li>
+                    </ul>
+
+                </div>
+                <div id="hide">
+                <pre>
+<span>           Web Developer</span>
+           Designing web UI 
+ <span>          Database Designer</span>
+           Minimizing Database Queries
+<span>           Content Writer</span>
+           Wrtting Articals That Your Blow Your Mind</pre>
+
+        </div>
+        
+            <div id="hide1">
+                <pre>
+      <span>      youtube Developer</span>
+         youtube web UI 
+     <span>      Database Designer</span>
+            youtube Database Queries
+     <span>      Content Writer</span>
+           youtube Articals That Your Blow Your Mind</pre>
+
+        </div>
+            
+
+            <div id="hide2">
+                <pre>
+<span>           insta Developer</span>
+           insta web UI 
+<span>          Database Designer</span>
+           insta Database Queries
+<span>           Content Writer</span>
+           insta Articals That Your Blow Your Mind</pre>
+    
+        </div>
+    </div>
+                </div>
+        </section>
+
+        <h2 class="h2">Services</h2>
+        <section class="service" id="service">
+
+
+
+
+            <div class="service-container">
+
+                <pre class="servicepre">  
+<img src="png.png" height="80px" alt="">
+<h2><span  class="servicespan"> Web Design </span></h2>
+As a freelance web developer, I offer
+professional website development 
+services tailored to my clients' needs.
+With expertise in design, programming,
+and quality assurance, I create visually
+appealing, user-friendly websites that 
+effectively showcase businesses and 
+individualsonline. Let me bring your 
+digital vision to life.
+Learn More</pre>
+
+            </div>
+
+            <div class="service-container">
+                <pre class="servicepre">
+<img src="png1.png" height="80px" alt="">
+ <h2><span  class="servicespan">  Database Designer </span></h2>
+ As a freelance database designer,
+ I provide expert services in designing
+ and optimizing databases for clients.
+ With a deep understanding of data
+ modeling, database management systems,
+ and efficient query design, I ensure
+ the development of robust and scalable
+ database solutions. Let me help you organize
+ and optimize your data for better efficiency
+ and performance.
+ Learn More</pre>
+
+
+            </div>
+
+            <div class="service-container">
+
+                <pre class="servicepre">
+<img src="png3.png" height="80px" alt="">
+    <h2><span class="servicespan">  Content Writer </span></h2>
+    As a freelance content writer, I provide
+    versatile writing services to cater
+    to your specific needs. With a keen eye
+    for detail and a knack for storytelling,
+    I deliver engaging blog posts, articles,
+    website copy, and social media content
+    that captivates your audience. From
+    informative and educational pieces to 
+    persuasive and conversion-driven content,
+    I ensure that your message is effectively
+    communicated. Let me help you enhance
+    your online presence and connect with 
+    your target audience through compelling 
+    and well-crafted written content.
+    Learn More</pre>
+
+            </div>
+
+
+        </section>
+
+
+        <h2 class="h2">My Work</h2>
+
+        <section class="work" id="work">
+
+            <div class="workcontainer">
+
+                <img src="imggg.png" class="img" height="500px"  alt="">
+
+                <div class="transform">
+
+                    <h2>Figma Design's</h2>
+
+        <pre>        Lorem ipsum dolor sit amet
+        consectetur adipisicing elit.
+        Laboriosam id laborum facilis
+        illo reiciendis culpa accusantium
+        odio magni distinctio, obcaecati
+        libero nobis asperiores consectetur
+        similique, vel incidunt est voluptas aperiam!</pre>
+                </div>
+
+            </div>
+
+            <div class="workcontainer">
+
+                <img src="p1.png" class="img" height="500px" alt="">
+
+                <div class="transform">
+
+                    <h2>My Portfolio</h2>
+
+        <pre>        Lorem ipsum dolor sit amet
+        consectetur adipisicing elit.
+        Laboriosam id laborum facilis
+        illo reiciendis culpa accusantium
+        odio magni distinctio, obcaecati
+        libero nobis asperiores consectetur
+        similique, vel incidunt est voluptas aperiam!</pre>
+                </div>
+                
+            </div>
+
+            <div class="workcontainer">
+
+                <img src="new1.png" class="img" height="500px" width="100%" alt="">
+
+                <div class="transform">
+
+                    <h2>Ecommerce website</h2>
+
+        <pre>        Lorem ipsum dolor sit amet
+        consectetur adipisicing elit.
+        Laboriosam id laborum facilis
+        illo reiciendis culpa accusantium
+        odio magni distinctio, obcaecati
+        libero nobis asperiores consectetur
+        similique, vel incidunt est voluptas aperiam!</pre>
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <footer class="footer" id="contact">
+
+            <div class="footercontainer">
+
+                <h1>Contact Me</h1><br>
+
+                <h4> 📩 dattanikishan1073@gmail.com</h4><br>
+                <h4 id="num" > ☏ +91 9558086931</h4><br> 
+
+                <ul>
+                    <li><a href="https://www.instagram.com/dattani_kishan_2002/"><img src="instagram.png" height="30px" alt=""></a></li>
+                    <li><a href="#num.html"><img src="telephone.png" height="30px" alt=""></a></li>
+                    <li><a href="https://www.linkedin.com/in/kishan-dattani-7a7179277/"><img src="linkedin.png" height="30px" alt=""></a></li>
+                    <li><a href="https://web.telegram.org/k/"><img src="telegram.png" height="30px" alt=""></a></li>
+                </ul>
+
+                <br><br>
+                <button onclick="download">Download CV</button>
+
+            </div>
+
+
+            <div class="footercontainer">
+
+
+                <input class="input" type="text" placeholder="Your Name"> <br>
+                <input class="input" type="text" placeholder="exampale@gmail.com"><br>
+                <textarea  name="" id="" cols="50" rows="6" placeholder="Your message....."></textarea><br>
+
+                <button class="submit">Submit</button>
+                
+            </div>
+
+        </footer>
+
+
+
+<script>
+        function myfunction(){
+            let a = document.getElementById("hide");
+            let b = document.getElementById("hide1");
+            let c = document.getElementById("hide2");
+                if(a.style.display === "block"){
+                    a.style.display = "none";
+                    b.style.display = "none";
+                    c.style.display = "none";
+                }
+                else{
+                    a.style.display = "block";
+                    b.style.display = "none";
+                    c.style.display = "none";
+                }
+            }
+        
+            function myfunction1(){
+                let a = document.getElementById("hide");
+                let b = document.getElementById("hide1");
+                let c = document.getElementById("hide2");
+                    if(b.style.display === "block"){
+                        a.style.display = "none";
+                        b.style.display = "none";
+                        c.style.display = "none";
+                    }
+                    else{
+                        a.style.display = "none";
+                        b.style.display = "block";
+                        c.style.display = "none";
+                    }
+                }
+                function myfunction2(){
+                    let a = document.getElementById("hide");
+                    let b = document.getElementById("hide1");
+                    let c = document.getElementById("hide2");
+                        if(c.style.display === "block"){
+                            a.style.display = "none";
+                            b.style.display = "none";
+                            c.style.display = "none";
+                        }
+                        else{
+                            a.style.display = "none";
+                            b.style.display = "none";
+                            c.style.display = "block";
+                        }
+                    }
+            </script>
+
+    </body>
+</html>
