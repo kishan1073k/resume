@@ -154,7 +154,7 @@
             height: 650px;
             width: 30%;
             border-radius: 5%;
-          background-color: rgb(50, 45, 45);
+            background-color: rgb(50, 45, 45);
             margin: 0px 30px;
             color: #fff;
 
@@ -188,9 +188,8 @@
         .workcontainer{
 
             height: 550px;
-            width: 30%;
+            width: 325px;
             border-radius: 5%;
-            border: 2px solid grey;
             margin: 0px 30px;
             color: #fff;
             transition: .8s ease;
@@ -199,10 +198,12 @@
        
         .transform{
             display: none;
-            color: white;  
+              color: white;  
             opacity: 0.8;
             transform: translatey(-500px);
-           width: 100%;
+           width:95%;
+           margin-left: 8px;
+           border: 2px solid white;
             color: white;
             height: 470px;
             border-radius: 5%;
@@ -219,8 +220,10 @@
         
         .img{
            
-            width: 325px;
+            width: 95%;
+            margin-left: 8px;
             height: 510px;
+            margin-top: 18px;
 
         }
 
@@ -296,7 +299,7 @@
         /* media query start */
 
 
-        @media screen and (max-width: 600px) and (min-width: 350px){
+        @media screen and (max-width: 500px) and (min-width: 300px){
 
            
             .list{
@@ -304,12 +307,11 @@
                 flex-direction: column;
                 margin-top: 40px;
                 position: absolute;
-                margin-left: -570px;
+                margin-left: -100%;
                 width: 100%;
-                height: auto;
                 display: none;
-              /*  background-color: #f0004b;*/
-    
+              
+               background-color: #f0004b;    
     
             }
             .list-item{
@@ -333,7 +335,7 @@
            
             .container2{
                 
-                margin-left: 150px;
+                margin-left: 50px;
             }
            
             .about{
@@ -343,24 +345,17 @@
                 justify-content: center;
                 margin-top: 100px;
                 flex-direction: column;
-                margin-left: 40px;
+                margin-left: 20px;
     
             }
-            .img{
-    
-                width: 30%;
-                height: 30%;
-                border-radius: 2%;
-                margin-left: -200px;
-    
-            }
-
+           
             .aboutinfo{
 
-                width: 65%;
+                width: 75%;
                 height: 30%;
                 margin: 30px;
                 color: #fff;
+                font-size: 12px;
     
     
             }
@@ -370,19 +365,18 @@
             }
     
             .infolist{
-                display: flex;
-                list-style: none;
-                margin: 0px;
-                padding: 0px;
-                margin-left: 0px;
-                flex-direction: row;
+               display: flex;
+               flex-direction: column;
+               margin: 10px;
+            margin-left: 0;
                
     
             }
             .infolist li{
     
-                margin: 0px 0px;
+                margin: 10px 0px;
                 width: 150px;
+              
     
             }
             pre{
@@ -410,11 +404,12 @@
     
             .service-container{
     
-                height: 650px;
-                width: 65%;
+                height: 590px;
+                width: 90%;
                 border-radius: 5%;
               background-color: rgb(50, 45, 45);
                 margin: 20px 30px;
+                font-size: 15px;
                 color: #fff;
     
             }
@@ -430,49 +425,16 @@
             .workcontainer{
     
                 height: 550px;
-                width: 60%;
+                width: 90%;
                
     
             }
            
-            .transform{
-                display: none;
-                color: white;  
-                opacity: 0.8;
-                transform: translatey(-500px);
-               width: 100%;
-                color: white;
-                height: 470px;
-                border-radius: 5%;
-                background: linear-gradient(#dc376b,#f0004b) ;
-                transition: .8s ease;
-            }
-            
-            .workcontainer:hover  .transform{
-               
-                display: block;
-                transition: .8s ease;
-               
-            }
-            
-            .img{
-               
-                width: 325px;
-                height: 510px;
-                margin-left: 00px;
-    
-            }
-    
+           
+         
             .footer{
     
-                width: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                color: #fff;
-                padding: 20px;
-                font-size: 20px;
-                margin-top: 20px;
+               
                 flex-direction: column;
     
     
@@ -481,12 +443,7 @@
     
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
-                width: 47%;
-                height: 400px;
-                color: #fff;
-                border-radius: 5%;
-                margin: 0px 10px;
+            
     
             }
             .footercontainer ul{
@@ -517,8 +474,8 @@
                 border: none;
                 border-radius: 4px;
                 height: 40px;
-                width: 430px;
-                margin-left: -50px;
+                width: 330px;
+                margin-left: 0px;
     
             }
             textarea{
@@ -526,8 +483,8 @@
                 background-color: rgb(50, 45, 45) ;
                 border: none;
                 border-radius: 4px;
-                width: 430px;
-                margin-left: -50px;
+                width: 330px;
+                margin-left: 0px;
             }
             #hide1{
                 display: none;
@@ -737,7 +694,7 @@ Learn More</pre>
 
             <div class="workcontainer">
 
-                <img src="imggg.png" class="img" height="500px"  alt="">
+                <img src="w1.png" class="img"   alt="">
 
                 <div class="transform">
 
@@ -756,7 +713,7 @@ Learn More</pre>
 
             <div class="workcontainer">
 
-                <img src="p1.png" class="img" height="500px" alt="">
+                <img src="w2.png" class="img" alt="">
 
                 <div class="transform">
 
@@ -775,7 +732,7 @@ Learn More</pre>
 
             <div class="workcontainer">
 
-                <img src="new1.png" class="img" height="500px" width="100%" alt="">
+                <img src="w3.png" class="img"  alt="">
 
                 <div class="transform">
 
